@@ -7,9 +7,20 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Event.destroy_all
+
+party = Category.create(name: "Party")
+lecture = Category.create(name: "Lecture")
+bootcamp = Category.create(name: "Bootcamp")
 
 john = User.create!(email: "john@john.com", password: "123456")
+tim = User.create!(email: "tim@tim.com", password: "123456")
+san = User.create!(email: "san@san.com", password: "123456")
 
-event = Event.create!(name: "Partytime", description: "Fun party event", location: "Rotterdam",
+Event.create!(name: "Partytime", description: "Fun party event", location: "Rotterdam",
 price: 9.99, capacity: 99, includes_food: true, includes_drink: false, starts_at: DateTime.now+1,
-ends_at: DateTime.now+10, active: true, user: john)
+ends_at: DateTime.now+10, active: true, user: john, categories: [bootcamp, lecture])
+
+Event.create!(name: "Lessontime", description: "Learn a lesson", location: "Amsterdam",
+price: 7.99, capacity: 88, includes_food: true, includes_drink: false, starts_at: DateTime.now+1,
+ends_at: DateTime.now+10, active: true, user: john, categories: [party, lecture])

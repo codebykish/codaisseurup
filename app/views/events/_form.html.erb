@@ -40,6 +40,15 @@
       <%= f.text_area :description, rows: 5, placeholder: "Description", class: "form-control" %>
     </div>
 
+  <div class="form-group">
+      <label>Select Categories</label>
+      <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |b| %>
+
+      <%= b.check_box(class: "check_box") %> <%= b.object.name %>
+
+      <% end %>
+      </div
+
     <div class=“form-group”>
      <label>Starts at</label>
      <%= f.datetime_select :starts_at %>
