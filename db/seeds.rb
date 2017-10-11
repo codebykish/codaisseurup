@@ -11,5 +11,5 @@ User.destroy_all
 john = User.create!(email: "john@john.com", password: "123456")
 
 event = Event.create!(name: "Partytime", description: "Fun party event", location: "Rotterdam",
-price: 9.99, capacity: 99, includes_food: true, includes_drink: true, starts_at: DateTime.now+1,
+price: 9.99, capacity: 99, includes_food: true, includes_drink: false, starts_at: DateTime.now+1,
 ends_at: DateTime.now+10, active: true, user: john)
