@@ -68,3 +68,6 @@ gem 'devise', '~> 4.2'
 
 #Use CarrierWave for uploading images
 gem 'carrierwave', '0.11.2'
+
+#Cloudinary remote image storage
+gem 'cloudinary', '1.2.3'
