@@ -7,8 +7,8 @@ FactoryGirl.define do
     capacity          50
     includes_food     true
     includes_drink    true
-    starts_at         { Faker::Date.today }
-    ends_at           { Faker::Date.forward(2) }
+    starts_at         { Date.today }
+    ends_at           { Date.today + 2.days }
 
 
     user              { build(:user) }
