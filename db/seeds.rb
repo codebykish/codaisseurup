@@ -46,3 +46,8 @@ photo7 = Photo.create!(remote_image_url: "http://res.cloudinary.com/imagestoreth
 photo8 = Photo.create!(remote_image_url: "http://res.cloudinary.com/imagestorethingy/image/upload/v1507821679/pexels-photo-399610_svd246.jpg", event: event_3)
 photo9 = Photo.create!(remote_image_url: "http://res.cloudinary.com/imagestorethingy/image/upload/v1507821663/pexels-photo-169198_x7w8zh.jpg", event: event_3)
 photo10 = Photo.create!(remote_image_url: "http://res.cloudinary.com/imagestorethingy/image/upload/v1507821640/pexels-photo-433452_wdnaxa.jpg", event: event_3)
+
+# registrations
+
+Registration.create!(event: event1, user: john, active: true, price: 100, guests_count: 2)
+Registration.create!(event: event1, user: san, active: true, price: 50, guests_count: 3)
